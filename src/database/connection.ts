@@ -1,0 +1,3 @@
+/**
+ * Connection to the database
+ */
