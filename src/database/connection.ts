@@ -1,5 +1,7 @@
 import Surreal from 'surrealdb';
 
+import { envVariables } from '../config';
+
 // Define the database configuration interface
 interface DbConfig {
   url: string;
@@ -11,11 +13,11 @@ interface DbConfig {
 
 // Define the default database configuration
 const DEFAULT_CONFIG: DbConfig = {
-  url: 'http://127.0.0.1:8000/rpc',
-  namespace: 'test',
-  database: 'test',
-  username: 'root',
-  password: 'root',
+  url: envVariables.DATABASE_URL,
+  namespace: envVariables.DATABASE_NAMESPACE,
+  database: envVariables.DATABASE_NAME,
+  username: envVariables.DATABASE_USERNAME,
+  password: envVariables.DATABASE_PASSWORD,
 };
 
 // Define the function to get the database instance
@@ -25,6 +27,8 @@ export async function getDatabaseConnection(config: DbConfig = DEFAULT_CONFIG): 
   try {
     await db.connect(config.url);
     await db.use({ namespace: config.namespace, database: config.database });
+
+    if (db.status !== 'connected') throw new Error('Failed to connect to SurrealDB');
 
     return db;
   } catch (err) {
