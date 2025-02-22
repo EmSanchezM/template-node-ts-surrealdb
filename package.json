@@ -4,7 +4,7 @@
   "description": "Template for Node.js projects using TypeScript and SurrealDB",
   "main": "index.js",
   "scripts": {
-    "start:dev": "ts-node src/app.ts",
+    "start:dev": "node --watch -r ts-node/register src/app.ts",
     "start": "node dist/app.js",
     "lint": "biome check src",
     "format": "biome format --write src",
