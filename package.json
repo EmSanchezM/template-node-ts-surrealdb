@@ -4,7 +4,7 @@
   "description": "Template for Node.js projects using TypeScript and SurrealDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "ts-node src/app.ts",
     "lint": "biome check src",
     "format": "biome format --write src",
     "build": "tsc"
