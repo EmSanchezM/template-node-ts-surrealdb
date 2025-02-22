@@ -4,15 +4,18 @@
   "description": "Template for Node.js projects using TypeScript and SurrealDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome check src",
+    "format": "biome format --write src"
   },
   "keywords": [],
   "author": "Elvin Sanchez | emsanchez891@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.13.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "22.13.5",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.3"
   },
   "dependencies": {
     "@surrealdb/node": "1.0.0-beta.3"
