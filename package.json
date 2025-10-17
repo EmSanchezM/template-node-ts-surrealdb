@@ -14,14 +14,14 @@
   "author": "Elvin Sanchez | emsanchez891@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/node": "22.13.5",
+    "@biomejs/biome": "2.2.6",
+    "@types/node": "24.8.1",
     "ts-node": "10.9.2",
-    "typescript": "5.7.3"
+    "typescript": "5.9.3"
   },
   "dependencies": {
-    "dotenv": "16.4.7",
-    "surrealdb": "1.2.1",
-    "valibot": "1.0.0-rc.1"
+    "dotenv": "17.2.3",
+    "surrealdb": "1.3.2",
+    "valibot": "1.1.0"
   }
 }
